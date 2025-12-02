@@ -1,0 +1,10 @@
+export { Hero } from './Hero';
+export { DashboardMockup } from './DashboardMockup';
+export { WhoWeAre } from './WhoWeAre';
+export { CoreOfferings } from './CoreOfferings';
+export { HowItWorks } from './HowItWorks';
+export { ExampleOutcomes } from './ExampleOutcomes';
+export { Testimonials } from './Testimonials';
+export { Pricing } from './Pricing';
+export { FAQ } from './FAQ';
+export { FinalCTA } from './FinalCTA';
