@@ -44,6 +44,7 @@ export const ExampleOutcomes: React.FC = () => {
       <Container>
         <div ref={titleRef} className="text-center mb-12 animate-on-scroll fade-in-up">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">Example Outcomes</h2>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p className="text-xl text-gray-300">Real-world systems we've architected for ambitious builders</p>
         </div>
 
