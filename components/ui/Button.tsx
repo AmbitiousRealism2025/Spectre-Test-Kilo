@@ -29,20 +29,14 @@ export const Button: React.FC<ButtonProps> = ({
 
   const buttonClasses = `${baseClasses} ${variantClasses} ${disabledClasses} ${className}`.trim();
 
-  if (href) {
+  // When disabled or loading with an href, render a button instead of a Link
+  // This ensures proper accessibility semantics for non-interactive states
+  if (href && !(disabled || isLoading)) {
     return (
       <Link
         href={href}
         className={buttonClasses}
         aria-label={ariaLabel}
-        aria-disabled={disabled || isLoading}
-        aria-busy={isLoading}
-        tabIndex={disabled || isLoading ? -1 : undefined}
-        onClick={(e) => {
-          if (disabled || isLoading) {
-            e.preventDefault();
-          }
-        }}
       >
         {children}
       </Link>
@@ -55,7 +49,6 @@ export const Button: React.FC<ButtonProps> = ({
       type="button"
       disabled={disabled || isLoading}
       aria-label={ariaLabel}
-      aria-disabled={disabled || isLoading}
       aria-busy={isLoading}
     >
       {children}

@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, CSSProperties } from 'react';
 
 export function useParallax(speed: number = 0.5) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const [style, setStyle] = useState<React.CSSProperties>({});
+  const [style, setStyle] = useState<CSSProperties>({});
 
   useEffect(() => {
     if (!elementRef.current) return;

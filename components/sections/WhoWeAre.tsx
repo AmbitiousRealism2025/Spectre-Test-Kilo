@@ -21,13 +21,11 @@ export const WhoWeAre: React.FC = () => {
 
             <div className="space-y-4 text-gray-300">
               <p className="text-lg">
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                <span className="hero-gradient-text">Ambitious Realism</span> is the philosophy that drives everything we build. It's the perfect blend of bold vision and practical execution.
+                <span className="hero-gradient-text">Ambitious Realism</span> is the philosophy that drives everything we build. It&apos;s the perfect blend of bold vision and practical execution.
               </p>
 
               <p>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                We're not just dreamers - we're builders who understand that great ideas need solid foundations. Our approach combines AI consultancy, creative studio thinking, and hands-on development to create solutions that are both innovative and achievable.
+                We&apos;re not just dreamers - we&apos;re builders who understand that great ideas need solid foundations. Our approach combines AI consultancy, creative studio thinking, and hands-on development to create solutions that are both innovative and achievable.
               </p>
 
               <p>

@@ -16,6 +16,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
 
   // Update current section based on URL hash
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1); // Remove #
       setCurrentSection(hash || null);
@@ -44,6 +46,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
 
   // Close menu on Escape key
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
         setIsOpen(false);
@@ -70,6 +74,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
   // Focus trap for mobile menu
   useEffect(() => {
     if (!isOpen) return;
+    if (typeof document === 'undefined') return;
 
     const menuContainer = menuRef.current;
     if (!menuContainer) return;
